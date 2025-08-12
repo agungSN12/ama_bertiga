@@ -1,1 +1,1 @@
-# Budget Tracker + AI Financial Advisor SETUP
+# Setup NextJS
