@@ -2,8 +2,8 @@ const Footer = () => {
   return (
     <>
       <footer className="bg-black text-white p-10 md:m-10  rounded-3xl">
-        <div className="container mx-auto max-w-6xl grid grid-cols-1 md:grid-cols-[2fr_1fr_1fr_1fr] gap-10">
-          <div className="">
+        <div className="container mx-auto w-full grid grid-cols-1 md:grid-cols-[2fr_1fr_1fr_1fr] gap-10">
+          <div className="lg:w-sm">
             <h3 className="font-bold text-lg mb-3">AMA BERTIGA</h3>
             <p className="text-xs leading-relaxed mb-4">
               PT Ama Bertiga adalah mitra terpercaya dalam pembuatan pakaian

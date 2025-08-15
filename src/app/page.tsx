@@ -29,9 +29,13 @@ export default function Home() {
   const [modal, setModal] = useState<ModalProps | null>(null);
   return (
     <>
-      <main className="bg-gray-50 min-h-screen overflow-hidden">
-        <section className="relative bg-[url('/images/photo1.png')] bg-no-repeat h-96 lg:h-screen bg-center rounded-4xl m-5 md:my-0 md:mx-9 items-center flex  ">
-          <div className="px-4  md:p-16" data-aos="fade-in" data-aos-offset="0">
+      <main className="bg-gray-50 min-h-screen md:mt-20 overflow-hidden">
+        <section className="relative bg-[url('/images/photo1.png')] bg-no-repeat h-96 lg:h-screen  bg-center rounded-4xl m-5 md:my-0 md:mx-9 items-center flex  ">
+          <div
+            className="px-4 absolute md:p-16"
+            data-aos="fade-in"
+            data-aos-offset="0"
+          >
             <p className="text-yellow-400 font-semibold text-sm sm:text-base mb-2">
               Ama<span className="font-bold primary-color">Bertiga</span>
             </p>
@@ -49,9 +53,9 @@ export default function Home() {
           {/* Info Bar */}
           <div
             data-aos="fade-up"
-            className=" w-full  absolute left-1/2  flex flex-col sm:flex-row bottom-[-20.5rem] md:bottom-[-20rem] lg:bottom-[-5.5rem]  items-center sm:items-start text-gray-700"
+            className=" w-full  absolute   flex flex-col sm:flex-row bottom-[-25.5rem]  lg:bottom-[-5.5rem]  items-center justify-center text-gray-700"
           >
-            <div className="bg-white rounded-xl md:w-full lg:w-5xl shadow-lg gap-14 flex flex-col lg:flex-row p-5 md:p-8 transform -translate-x-1/2 ">
+            <div className="bg-white rounded-xl md:w-full md:mx-24  lg:w-5xl shadow-lg gap-14 flex flex-col lg:flex-row p-5 md:p-8  ">
               <div className="flex items-center space-x-4 max-w-full ">
                 <div className="flex gap-4">
                   <span className=" flex justify-center items-center secondary-color">
@@ -126,7 +130,7 @@ export default function Home() {
         </section>
 
         {/* Welcome Section */}
-        <section className="max-w-7xl mt-[20rem] md:mt-[22rem] lg:mt-48 md:mb-20 justify-center  mx-auto px-6 sm:px-12 py-12 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+        <section className="w-full mt-[28rem]  lg:mt-48 md:mb-20 justify-center  mx-auto px-6 md:px-24  py-12 grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
           <div className="pl-4" data-aos="fade-in">
             <h2 className="text-2xl md:text-3xl font-extrabold primary-color mb-4 leading-tight">
               Welcome To <br />
@@ -147,12 +151,12 @@ export default function Home() {
           </div>
           <div
             data-aos="fade-left"
-            className="overflow-hidden  flex items-center justify-end"
+            className="overflow-hidden  flex items-center  justify-center lg:justify-end"
           >
             <Image
               src={"/images/seragam.jpg"}
               alt=""
-              className="flex shadow-lg rounded-xl"
+              className="flex shadow-lg w-full rounded-xl"
               width={300}
               height={300}
             />
@@ -160,83 +164,86 @@ export default function Home() {
         </section>
 
         {/* kenapa pilih toko kami */}
-        <div className="bg-blue-color  text-white rounded-4xl p-10 max-w-7xl mx-auto mt-10">
-          <h2
-            data-aos="fade-out"
-            className="text-2xl md:text-3xl font-extrabold mb-4 leading-tight text-center"
-          >
-            Kenapa harus beli di Toko Kami?
-          </h2>
-          <p
-            data-aos="fade-in"
-            className="text-center text-xs md:text-sm mb-8 max-w-2xl mx-auto"
-          >
-            Kami terbukti, layanan terpercaya, mitra yang bisa diandalkan. Kami
-            hadir untuk jadi bagian dari setiap langkah bisnismu di dunia
-            tekstil.
-          </p>
-          <div className="flex flex-col md:flex-row gap-6 md:gap-10">
-            {/* Left Image */}
-            <div
-              data-aos="zoom-in"
-              className="md:w-1/3 rounded-lg overflow-hidden shadow-lg"
-            >
-              <Image
-                src={"/images/photo3.png"}
-                alt=""
-                width={300}
-                height={300}
-              />
-            </div>
-            {/* Right Content List */}
-            <div
+        <div className="w-full grid">
+          <div className="bg-blue-color  text-white rounded-4xl p-10  mx-4 md:mx-20 mt-10">
+            <h2
               data-aos="fade-out"
-              className="md:w-2/3 flex flex-col  justify-center space-y-14"
+              className="text-2xl md:text-3xl font-extrabold mb-4 leading-tight text-center"
             >
-              <div className="flex items-start space-x-4">
-                <div className="flex items-center justify-center  bg-opacity-20 rounded-full w-12 h-12 shrink-0">
-                  <CreditCardIcon size={50} />
-                </div>
-                <div>
-                  <h3 className="font-semibold text-md md:text-lg mb-1">
-                    Produk Tekstil Berkualitas
-                  </h3>
-                  <p className="text-xs md:sm text-white/80 ">
-                    Kami menyediakan berbagai jenis kain dan produk tekstil
-                    unggulan, mulai dari bahan lokal hingga impor dengan standar
-                    mutu tinggi.
-                  </p>
-                </div>
+              Kenapa harus beli di Toko Kami?
+            </h2>
+            <p
+              data-aos="fade-in"
+              className="text-center text-xs md:text-sm mb-8 max-w-2xl mx-auto"
+            >
+              Kami terbukti, layanan terpercaya, mitra yang bisa diandalkan.
+              Kami hadir untuk jadi bagian dari setiap langkah bisnismu di dunia
+              tekstil.
+            </p>
+            <div className="flex flex-col lg:flex-row gap-6 md:gap-10">
+              {/* Left Image */}
+              <div
+                data-aos="zoom-in"
+                className="md:w-full  rounded-lg flex justify-center items-center overflow-hidden shadow-lg"
+              >
+                <Image
+                  src={"/images/photo3.png"}
+                  alt=""
+                  className="w-full lg:w-2/3 "
+                  width={300}
+                  height={300}
+                />
               </div>
+              {/* Right Content List */}
+              <div
+                data-aos="fade-out"
+                className="md:w-full flex flex-col  justify-center space-y-14"
+              >
+                <div className="flex items-start space-x-4">
+                  <div className="flex items-center justify-center  bg-opacity-20 rounded-full w-12 h-12 shrink-0">
+                    <CreditCardIcon size={50} />
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-sm md:text-lg mb-1">
+                      Produk Tekstil Berkualitas
+                    </h3>
+                    <p className="text-xs md:sm text-white/80 ">
+                      Kami menyediakan berbagai jenis kain dan produk tekstil
+                      unggulan, mulai dari bahan lokal hingga impor dengan
+                      standar mutu tinggi.
+                    </p>
+                  </div>
+                </div>
 
-              <div className="flex items-start space-x-4">
-                <div className="flex items-center justify-center  bg-opacity-20 rounded-full w-12 h-12 shrink-0">
-                  <BagIcon size={50} />
+                <div className="flex items-start space-x-4">
+                  <div className="flex items-center justify-center  bg-opacity-20 rounded-full w-12 h-12 shrink-0">
+                    <BagIcon size={50} />
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-sm md:text-lg mb-1">
+                      Akses Pemesanan Fleksibel
+                    </h3>
+                    <p className="text-xs md:text-sm text-white/80">
+                      Pelanggan bisa melakukan pemesanan kapan saja melalui
+                      sistem online kami yang siap 24/7.
+                    </p>
+                  </div>
                 </div>
-                <div>
-                  <h3 className="font-semibold text-md md:text-lg mb-1">
-                    Akses Pemesanan Fleksibel
-                  </h3>
-                  <p className="text-xs md:text-sm text-white/80">
-                    Pelanggan bisa melakukan pemesanan kapan saja melalui sistem
-                    online kami yang siap 24/7.
-                  </p>
-                </div>
-              </div>
 
-              <div className="flex items-start space-x-4">
-                <div className="flex items-center justify-center  bg-opacity-20 rounded-full w-12 h-12 shrink-0">
-                  <UsersFourIcon size={50} />
-                </div>
-                <div>
-                  <h3 className="font-semibold text-md md:text-lg mb-1">
-                    Jaringan Supplier & Mitra Luas
-                  </h3>
-                  <p className="text-xs md:text-sm text-white/80">
-                    Didukung oleh jaringan mitra dan supplier dari berbagai
-                    daerah, kami terus memenuhi kebutuhan tekstil dalam skala
-                    kecil hingga besar.
-                  </p>
+                <div className="flex items-start space-x-4">
+                  <div className="flex items-center justify-center  bg-opacity-20 rounded-full w-12 h-12 shrink-0">
+                    <UsersFourIcon size={50} />
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-sm md:text-lg mb-1">
+                      Jaringan Supplier & Mitra Luas
+                    </h3>
+                    <p className="text-xs md:text-sm text-white/80">
+                      Didukung oleh jaringan mitra dan supplier dari berbagai
+                      daerah, kami terus memenuhi kebutuhan tekstil dalam skala
+                      kecil hingga besar.
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -244,105 +251,107 @@ export default function Home() {
         </div>
 
         {/* Produk Unggulan Section */}
-        <section className="max-w-7xl mx-auto mt-20 px-4 sm:px-6 lg:px-8">
-          <h2
-            data-aos="fade-out"
-            className="text-2xl md:text-3xl mb-2 primary-color font-bold"
-          >
-            Produk Unggulan Kami
-          </h2>
-          <p
-            data-aos="fade-in"
-            className="text-gray-600 text-xs md:text-sm mb-6 max-w-xl "
-          >
-            Produk Unggulan Kami, Pilihan Terbaik untuk Anda! Dirancang dengan
-            kualitas terbaik, harga bersahabat, dan hasil yang memuaskan.
-          </p>
-          <div className="h-0.5 w-24 bg-blue-color mb-10"></div>
+        <section>
+          <div className="md:mx-20  mt-20 px-4 sm:px-6 lg:px-8">
+            <h2
+              data-aos="fade-out"
+              className="text-2xl md:text-3xl px-4 mb-2 primary-color font-bold"
+            >
+              Produk Unggulan Kami
+            </h2>
+            <p
+              data-aos="fade-in"
+              className="text-gray-600 text-xs md:text-sm mb-6 max-w-xl px-4"
+            >
+              Produk Unggulan Kami, Pilihan Terbaik untuk Anda! Dirancang dengan
+              kualitas terbaik, harga bersahabat, dan hasil yang memuaskan.
+            </p>
+            <div className="h-0.5 w-28 bg-blue-color mb-10 ml-4 "></div>
 
-          {/* Produk Cards */}
-          <div
-            data-aos="fade-up"
-            data-aos-anchor-placement="top-bottom"
-            className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8"
-          >
-            <div className="border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
-              <div className="p-4">
-                <h3 className="font-semibold text-md md:text-sm mb-2 primary-color">
-                  Seragam
-                </h3>
-                <p className="text-gray-500 text-xs md:text-sm mb-4 ">
-                  Bahan kuat, nyaman, tahan lama, warna awet, dan tetap rapi.
-                </p>
-                <div className="overflow-hidden rounded-lg ">
-                  <Image
-                    src={"/images/photo2.png"}
-                    alt=""
-                    className="w-full  h-72 object-cover "
-                    width={300}
-                    height={300}
-                  />
+            {/* Produk Cards */}
+            <div
+              data-aos="fade-up"
+              data-aos-anchor-placement="top-bottom"
+              className="grid grid-cols-1  lg:grid-cols-3 gap-8"
+            >
+              <div className="border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
+                <div className="p-4">
+                  <h3 className="font-semibold text-md md:text-sm mb-2 primary-color">
+                    Seragam
+                  </h3>
+                  <p className="text-gray-500 text-xs md:text-sm mb-4 ">
+                    Bahan kuat, nyaman, tahan lama, warna awet, dan tetap rapi.
+                  </p>
+                  <div className="overflow-hidden rounded-lg ">
+                    <Image
+                      src={"/images/photo2.png"}
+                      alt=""
+                      className="w-full  h-72 object-cover "
+                      width={300}
+                      height={300}
+                    />
+                  </div>
+                </div>
+              </div>
+              <div className="border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
+                <div className="p-4">
+                  <h3 className="font-semibold text-md md:text-sm mb-2 primary-color">
+                    Baju
+                  </h3>
+                  <p className="text-gray-500 text-xs md:text-sm mb-4 ">
+                    {" "}
+                    Bahan premium, jahitan rapi, desain modern, nyaman dipakai,
+                    dan tahan lama.
+                  </p>
+                  <div className="overflow-hidden rounded-lg ">
+                    <Image
+                      src={"/images/kaos.jpg"}
+                      alt=""
+                      className="w-full h-72 object-cover"
+                      width={300}
+                      height={300}
+                    />
+                  </div>
+                </div>
+              </div>
+              <div className="border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
+                <div className="p-4">
+                  <h3 className="font-semibold text-md md:text-sm mb-2 primary-color">
+                    Kemeja
+                  </h3>
+                  <p className="text-gray-500 text-xs md:text-sm mb-4 ">
+                    Bahan lembut, potongan pas, jahitan presisi, rapi, dan
+                    nyaman seharian.
+                  </p>
+                  <div className="overflow-hidden rounded-lg">
+                    <Image
+                      src={"/images/kemeja.jpg"}
+                      alt=""
+                      className="w-full h-72 object-cover"
+                      width={300}
+                      height={300}
+                    />
+                  </div>
                 </div>
               </div>
             </div>
-            <div className="border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
-              <div className="p-4">
-                <h3 className="font-semibold text-md md:text-sm mb-2 primary-color">
-                  Baju
-                </h3>
-                <p className="text-gray-500 text-xs md:text-sm mb-4 ">
-                  {" "}
-                  Bahan premium, jahitan rapi, desain modern, nyaman dipakai,
-                  dan tahan lama.
-                </p>
-                <div className="overflow-hidden rounded-lg ">
-                  <Image
-                    src={"/images/kaos.jpg"}
-                    alt=""
-                    className="w-full h-72 object-cover"
-                    width={300}
-                    height={300}
-                  />
-                </div>
-              </div>
-            </div>
-            <div className="border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
-              <div className="p-4">
-                <h3 className="font-semibold text-md md:text-sm mb-2 primary-color">
-                  Kemeja
-                </h3>
-                <p className="text-gray-500 text-xs md:text-sm mb-4 ">
-                  Bahan lembut, potongan pas, jahitan presisi, rapi, dan
-                  nyaman seharian.
-                </p>
-                <div className="overflow-hidden rounded-lg">
-                  <Image
-                    src={"/images/kemeja.jpg"}
-                    alt=""
-                    className="w-full h-72 object-cover"
-                    width={300}
-                    height={300}
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
 
-          {/* Button */}
-          {/* <div className="flex justify-end mt-10">
+            {/* Button */}
+            {/* <div className="flex justify-end mt-10">
             <button className="primary-bg text-xs md:text-sm text-white hover:text-gray-900 px-5 py-2 rounded-md font-semibold transition-colors duration-300">
               Lihat produk selengkapnya
             </button>
           </div> */}
+          </div>
         </section>
 
-        <div className="min-h-screen bg-white primary-color mt-20 px-6 py-12 max-w-7xl mx-auto">
+        <div className="mt-16 mx-8  md:mx-[7.5rem]">
           {/* Contact Section */}
-          <section className="grid grid-cols-1 md:grid-cols-2 items-center justify-center gap-10 lg:gap-20">
-            <div className="flex-1 max-w-lg md:pl-14">
+          <section className="flex flex-col md:flex-row items-center justify-center gap-10 lg:gap-1">
+            <div className="flex flex-col justify-start   ">
               <h2
                 data-aos="fade-in"
-                className="text-2xl md:text-3xl font-semibold mb-3"
+                className="text-2xl md:text-3xl  font-semibold mb-3"
               >
                 Hubungi Kami untuk Info atau Kerja Sama
               </h2>
@@ -354,15 +363,20 @@ export default function Home() {
                 sama, jangan ragu menghubungi kami. Isi formulir sesuatu yang
                 bermanfaat bagimu.
               </p>
-              <Link
-                href={"/contact"}
-                data-aos="fade-in"
-                className="primary-bg text-xs md:text-sm text-white hover:text-gray-900 px-6 py-2 rounded-md font-semibold  transition"
-              >
-                Contact Us
-              </Link>
+              <div>
+                <Link
+                  href={"/contact"}
+                  data-aos="fade-in"
+                  className="primary-bg text-xs md:text-sm  text-white hover:text-gray-900 px-6 py-2 rounded-md font-semibold  transition"
+                >
+                  Contact Us
+                </Link>
+              </div>
             </div>
-            <div data-aos="fade-left" className="flex justify-center ">
+            <div
+              data-aos="fade-left"
+              className="flex justify-center md:justify-end w-full "
+            >
               <Image
                 src={"/images/photo_baju2.jpg"}
                 alt=""
@@ -374,7 +388,7 @@ export default function Home() {
           </section>
 
           {/* Testimony Section */}
-          <section className=" space-y-12 mt-28">
+          <section className=" space-y-12 mt-24 ">
             <h3
               data-aos="fade-in"
               className="text-2xl md:text-3xl font-semibold mb-8"
@@ -384,7 +398,7 @@ export default function Home() {
             <div
               data-aos="fade-up"
               data-aos-anchor-placement="top-bottom"
-              className="grid grid-cols-1 md:grid-cols-3 gap-6"
+              className="grid grid-cols-1 lg:grid-cols-3 gap-6"
             >
               <div className="border border-gray-200 rounded-md p-6 text-gray-700 bg-white">
                 <p className="mb-4 text-xs md:text-sm italic">
@@ -448,9 +462,9 @@ export default function Home() {
           {/* Feedback Section */}
           <section
             data-aos="fade-out"
-            className="mt-20 flex flex-col lg:flex-row justify-center items-center gap-16"
+            className="mt-20 flex w-full flex-col lg:flex-row justify-center items-center gap-16 "
           >
-            <div className="flex-1 max-w-lg">
+            <div className="flex-1 ">
               <h3 className="text-md md:text-lg font-semibold mb-3">
                 Bagikan pendapatmu Tentang Toko Kami
               </h3>
@@ -472,7 +486,7 @@ export default function Home() {
                 Sampaikan Masukanmu
               </button>
             </div>
-            <form className="flex-1 space-y-6 max-w-md w-full">
+            <form className="flex-1 space-y-6  w-full">
               <div className="flex flex-col">
                 <label
                   htmlFor="name"
@@ -505,7 +519,7 @@ export default function Home() {
           </section>
         </div>
 
-        <div className=" w-full bg-white flex flex-col justify-between">
+        <div className=" w-full md:mt-24 bg-white flex flex-col justify-between">
           <main className="container mx-auto px-5 md:px-16 py-12 max-w-full ">
             <h2
               data-aos="fade-in"

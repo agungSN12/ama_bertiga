@@ -12,7 +12,7 @@ export default function Page() {
     });
   }, []);
   return (
-    <div className="bg-gray-100 min-h-screen w-full">
+    <div className="bg-gray-100 min-h-screen w-full mt-16">
       {/* Header */}
       <header className="bg-[url('/images/photo4_header.png')] relative py-16 w-full h-12 bg-no-repeat">
         <h1

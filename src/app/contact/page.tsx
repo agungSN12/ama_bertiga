@@ -23,9 +23,9 @@ export default function Contact() {
   };
   return (
     <>
-      <div className="min-h-screen flex flex-col">
+      <div className="min-h-screen flex flex-col mt-16">
         {/* Hero Section */}
-        <header className="bg-[url('/images/photo4_header.png')]  relative py-16 w-full h-12 bg-no-repeat">
+        <header className="bg-[url('/images/photo4_header.png')]  relative py-16 w-full  h-12 bg-no-repeat">
           <h1
             data-aos="fade-in"
             className="text-center z-20 text-2xl absolute inset-0 flex justify-center items-center text-white font-bold  tracking-widest"

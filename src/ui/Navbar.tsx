@@ -35,7 +35,7 @@ export default function NavbarPage() {
     <Navbar
       isMenuOpen={isMenuOpen}
       onMenuOpenChange={setIsMenuOpen}
-      className=" primary-color  p-0 md:p-2"
+      className=" primary-color fixed  p-0 md:p-2"
       maxWidth="full"
     >
       <NavbarContent className="sm:hidden" justify="start">
