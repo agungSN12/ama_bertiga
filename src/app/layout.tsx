@@ -1,16 +1,18 @@
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import "./globals.css";
+import NavbarPage from "@/ui/Navbar";
+import { Providers } from "./providers";
 
 const poppins = Poppins({
   subsets: ["latin"],
-  weight: ["100", "200", "300", "400","500", "600","700", "800", "900"],
-  variable: "--font-poppins", 
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+  variable: "--font-poppins",
 });
 
 export const metadata: Metadata = {
-  title: "Budget Tracker Deacourse",
-  description: "Budget Tracker",
+  title: "Ama Bertiga",
+  description: "Ama Bertiga",
 };
 
 export default function RootLayout({
@@ -21,7 +23,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${poppins.variable} bg-gray-100 antialiased`}>
-        {children}
+        <Providers>
+          <NavbarPage />
+          {children}
+        </Providers>
       </body>
     </html>
   );
