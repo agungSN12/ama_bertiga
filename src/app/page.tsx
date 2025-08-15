@@ -426,7 +426,7 @@ export default function Home() {
               </div>
               <div className="border border-gray-200 rounded-md p-6 text-gray-700 bg-white">
                 <p className="mb-4 text-xs md:text-sm italic">
-                  “"Produk sesuai ekspektasi, kualitasnya bagus”
+                  “Produk sesuai ekspektasi, kualitasnya bagus”
                 </p>
                 <footer className="flex items-center gap-3">
                   <div className="w-8 h-8 rounded-full flex justify-center items-center bg-sky-600">
