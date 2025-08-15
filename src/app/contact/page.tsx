@@ -16,7 +16,7 @@ export default function Contact() {
   }, []);
 
   const handleSend = () => {
-    const url = `https://wa.me/081297075878?text=${encodeURIComponent(
+    const url = `https://wa.me/6288802110125?text=${encodeURIComponent(
       `Halo saya ${name}\n ${message}`
     )}`;
     window.open(url, "_blank");
