@@ -31,7 +31,7 @@ export default function Home() {
     <>
       <main className="bg-gray-50 min-h-screen overflow-hidden">
         <section className="relative bg-[url('/images/photo1.png')] bg-no-repeat h-96 lg:h-screen bg-center rounded-4xl m-5 md:my-0 md:mx-9 items-center flex  ">
-          <div className="px-4 md:p-16" data-aos="fade-in" data-aos-offset="0">
+          <div className="px-4  md:p-16" data-aos="fade-in" data-aos-offset="0">
             <p className="text-yellow-400 font-semibold text-sm sm:text-base mb-2">
               ama<span className="font-bold primary-color">Bertiga</span>
             </p>
